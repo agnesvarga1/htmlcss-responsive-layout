@@ -11,7 +11,7 @@
   --main-purple: #9792e4;
   --text-w: #fff;
   --text-b: #000;
-  --default-gap: 10px;
+  --default-gap: 20px;
 }
 
 html {
@@ -24,7 +24,7 @@ img {
 }
 
 .wrapper {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
 }
 a {
@@ -37,8 +37,8 @@ li {
 }
 
 .btn {
-  padding: 5px 10px;
-  border-radius: 20px;
+  padding: 5px 20px;
+  border-radius: 30px;
 }
 
 .btn-white {
@@ -84,20 +84,29 @@ section:nth-child(even) {
 }
 
 /*** Get demo app part section*/
-#demo .cards {
-  color: #5f7486;
+
+.cards {
   display: flex;
   flex-wrap: wrap;
-  gap: calc(var(--default-gap) * 2);
+  gap: var(--default-gap);
+}
+
+.card {
+  flex-basis: calc((100% / 3) - (13.33px));
+  border-radius: 20px;
+  padding: 20px;
+  line-height: 1.8;
+}
+#demo .cards {
+  color: #5f7486;
 }
 
 #demo .cards .card {
   background-color: var(--secondary-blue);
-  border-radius: 20px;
+
   flex-basis: calc((100% / 3) - (13.33px));
   text-align: center;
-  padding: 20px;
-  line-height: 1.8;
+
   font-weight: 700;
 }
 
@@ -212,3 +221,176 @@ section:nth-child(even) {
   border-radius: 50%;
   background-color: var(--main-purple);
 }
+
+/******** Testimonials section***/
+#testimonials .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--default-gap);
+}
+#testimonials .container span {
+  text-transform: uppercase;
+}
+#testimonials .container h1 {
+  color: var(--main-purple);
+  font-size: 2.5rem;
+}
+
+#testimonials .container .testimone {
+  display: flex;
+  background-color: var(--main-purple);
+  color: var(--text-w);
+  padding: 3rem;
+  border-radius: 20px;
+  align-items: center;
+  gap: var(--default-gap);
+}
+
+.avatar {
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#testimonials .container .testimone .avatar.av1 {
+  background-image: url("./img/testimonial1.jpg");
+}
+
+#testimonials .container .testimone .quote blockquote {
+  padding-bottom: 1rem;
+}
+
+#testimonials .container .testimone .avatar.av2 {
+  background-image: url("./img/testimonial2.jpg");
+}
+
+#testimonials .container .testimone .avatar.av3 {
+  background-image: url("./img/testimonial3.jpg");
+}
+
+/**** Features Section ***/
+#features .wrapper {
+  text-align: center;
+  color: var(--text-w);
+}
+#features h2 {
+  font-size: 3rem;
+}
+
+#features .wrapper .cards {
+  margin-top: 1rem;
+}
+
+#features .wrapper .card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--default-gap);
+  background-color: var(--text-w);
+  color: var(--main-purple);
+}
+
+#features .wrapper .card h3 {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+.btn-purple {
+  background-color: var(--main-purple);
+  color: var(--text-w);
+  font-weight: bold;
+}
+
+/****** About Us Section*****/
+
+#about-us .container {
+  display: flex;
+  gap: var(--default-gap);
+}
+#about-us .container:first-child h2,
+#about-us .container:last-child h4 {
+  color: var(--main-purple);
+}
+
+#about-us .container:first-child h2 {
+  font-size: 3rem;
+}
+
+#about-us .container .left-container {
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--default-gap) * 2);
+}
+
+#about-us .container .right-container {
+  position: relative;
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-gap);
+  padding: 20px;
+  align-items: center;
+}
+
+#about-us .container .right-container .avatar {
+  width: 80%;
+}
+
+#about-us .container .right-container .avatar.av-about {
+  background-image: url("./img/about.jpg");
+}
+
+#about-us .container .right-container .btn {
+  font-size: 0.7rem;
+}
+
+#quote-mark {
+  font-size: 4rem;
+  color: var(--main-purple);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/**** Get started section*****/
+#get-started {
+  color: var(--text-w);
+}
+
+#get-started .wrapper,
+footer .wrapper {
+  text-align: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-gap);
+  align-items: center;
+}
+
+#gs {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #b9b7ed;
+}
+
+#get-started .wrapper h3 {
+  font-size: 2rem;
+}
+
+#get-started .wrapper h2 {
+  font-size: 3rem;
+  color: #fdc15f;
+}
+
+#get-started .wrapper .btn {
+  color: var(--main-purple);
+  font-weight: bold;
+}
+
+/*****Foooter
