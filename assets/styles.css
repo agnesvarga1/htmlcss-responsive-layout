@@ -140,4 +140,5 @@ section {
 
 #demo .cards .card figure.icon svg {
   fill: var(--primary-blue);
+  height: 5rem;
 }
