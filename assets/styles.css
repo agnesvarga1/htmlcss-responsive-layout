@@ -16,4 +16,55 @@
 
 html {
   font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  padding: 0 7%;
+}
+a {
+  text-decoration: none;
+  color: var(--text-w);
+}
+
+li {
+  list-style-type: none;
+}
+
+.btn {
+  padding: 5px 8px;
+  border-radius: 20px;
+}
+
+.btn-white {
+  background-color: var(--text-w);
+}
+
+.btn-white:hover {
+  background-color: var(--secondary-blue);
+}
+
+.btn-white a {
+  color: var(--text-b);
+}
+
+header {
+  background-color: var(--primary-blue);
+  color: var(--text-w);
+  padding-block: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: var(--default-gap);
+}
+
+nav ul li {
+  padding: 5px 8px;
 }
