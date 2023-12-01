@@ -19,6 +19,10 @@ html {
   font-size: 16px;
 }
 
+img {
+  display: block;
+}
+
 .wrapper {
   width: 80%;
   margin: 0 auto;
@@ -74,6 +78,12 @@ nav ul li {
 section {
   padding-block: 3rem;
 }
+
+section:nth-child(even) {
+  background-color: var(--main-purple);
+}
+
+/*** Get demo app part section*/
 #demo .cards {
   color: #5f7486;
   display: flex;
@@ -141,4 +151,64 @@ section {
 #demo .cards .card figure.icon svg {
   fill: var(--primary-blue);
   height: 5rem;
+}
+
+/***** Planning section********/
+
+#planning .container {
+  line-height: 1.8;
+  padding: 5rem;
+  display: flex;
+  column-gap: var(--default-gap);
+  justify-content: center;
+  align-items: center;
+}
+
+#planning .container .plan-right,
+#planning .container .plan-left {
+  flex-basis: 50%;
+  color: var(--text-w);
+}
+
+#planning .container .plan-right {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--default-gap) * 5);
+}
+#planning .container .plan-right figure img {
+  width: 100%;
+}
+
+#planning .container .plan-left {
+  color: var(--text-b);
+  align-self: flex-end;
+}
+
+#planning .container .plan-left .app-dev {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 50%;
+  line-height: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-gap);
+  align-items: center;
+}
+
+#planning .container .plan-left .app-dev figure {
+  height: 100%;
+}
+
+#planning .container .plan-left .app-dev figure img {
+  width: 100%;
+}
+
+#planning .container .plan-left .app-dev span {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--main-purple);
 }
