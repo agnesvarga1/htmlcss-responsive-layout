@@ -17,6 +17,7 @@
 html {
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -52,13 +53,16 @@ li {
 .btn-white a {
   color: var(--text-b);
 }
+
 /********* Header + Nav***********/
 header {
   background-color: var(--primary-blue);
   color: var(--text-w);
   padding-block: 1rem;
 }
-
+.hamburger {
+  display: none;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -163,7 +167,9 @@ section:nth-child(even) {
 }
 
 /***** Planning section********/
-
+#planning .wrapper {
+  width: 50%;
+}
 #planning .container {
   line-height: 1.8;
   padding: 5rem;
@@ -180,9 +186,10 @@ section:nth-child(even) {
 }
 
 #planning .container .plan-right {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: calc(var(--default-gap) * 5);
+  gap: calc(var(--default-gap));
 }
 #planning .container .plan-right figure img {
   width: 100%;
@@ -190,31 +197,29 @@ section:nth-child(even) {
 
 #planning .container .plan-left {
   color: var(--text-b);
-  align-self: flex-end;
-}
-
-#planning .container .plan-left .app-dev {
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #fff;
   border-radius: 20px;
-  width: 50%;
+  height: 50%;
   line-height: 2;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: var(--default-gap);
   align-items: center;
+  transform: scale(0.8);
+  margin-top: 18%;
 }
 
-#planning .container .plan-left .app-dev figure {
-  height: 100%;
-}
-
-#planning .container .plan-left .app-dev figure img {
+#planning .container .plan-left figure img {
   width: 100%;
 }
 
-#planning .container .plan-left .app-dev span {
+#planning .container .plan-left p {
+  padding-bottom: 0.2rem;
+}
+
+#planning .container .plan-left span {
   height: 50px;
   width: 50px;
   padding: 10px;
@@ -392,5 +397,77 @@ footer .wrapper {
   color: var(--main-purple);
   font-weight: bold;
 }
+#get-started span a {
+  text-decoration: underline;
+}
 
 /*****Foooter***/
+footer {
+  padding: 3rem 1rem;
+  background-color: #333333;
+  color: var(--text-w);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer span a {
+  color: var(--main-purple);
+  text-decoration: underline;
+}
+/*****MEdia query Tablet view******/
+@media screen and (max-width: 850px) {
+  .wrapper {
+    padding-inline: 1rem;
+  }
+
+  header nav .nav-bar {
+    display: none;
+  }
+
+  .hamburger {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    justify-content: space-evenly;
+    gap: 5px;
+  }
+
+  .hamburger .hamburger-line {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+  }
+
+  .cards {
+    gap: 10px;
+  }
+  .card.card-others {
+    flex-basis: calc((100% / 3) - (6.66px));
+  }
+  #demo .cards .card.card-lg {
+    flex-basis: calc(((100% / 3.1) * 2));
+  }
+  /*planning*/
+  #planning .wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  #planning .container {
+    line-height: 1.8;
+
+    display: flex;
+    flex-direction: column;
+    column-gap: var(--default-gap);
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  #planning .container .plan-right,
+  #planning .container .plan-left {
+    flex-basis: 100%;
+  }
+}
