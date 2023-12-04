@@ -340,30 +340,41 @@ section:nth-child(even) {
 }
 
 #about-us .container .right-container {
-  position: relative;
   flex-basis: 20%;
-  display: flex;
-  flex-direction: column;
-  gap: var(--default-gap);
-  padding: 20px;
+  display: block;
+
+  padding-bottom: 10px;
   align-items: center;
 }
-
+#about-us .container .right-container .profile-img {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+}
 #about-us .container .right-container .avatar {
   width: 80%;
 }
 
-#about-us .container .right-container .avatar.av-about {
+#about-us .container .right-container .profile-img .avatar.av-about {
   background-image: url("./img/about.jpg");
 }
-
+#about-us .container .right-container h4 {
+  text-align: center;
+  margin-block: 0.5rem;
+}
+#about-us .container .right-container a:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
 #about-us .container .right-container .btn {
   font-size: 0.7rem;
 }
-
+#quote-mark svg {
+  width: 3rem;
+}
 #quote-mark {
-  font-size: 4rem;
-  color: var(--main-purple);
   position: absolute;
   top: 0;
   right: 0;
@@ -473,12 +484,11 @@ footer span a {
     flex-direction: column;
     column-gap: var(--default-gap);
     justify-content: center;
-    align-items: stretch;
   }
 
   #planning .container .plan-right,
   #planning .container .plan-left {
-    flex-basis: 100%;
+    width: 100%;
   }
   #planning .container .plan-left {
     transform: none;
@@ -493,6 +503,18 @@ footer span a {
   }
   #testimonials .container .testimone .quote {
     flex-basis: 50%;
+  }
+  /**** Features*****/
+  #features .wrapper .card {
+    gap: 10px;
+    flex-basis: 49%;
+  }
+  /*about us*/
+  #quote-mark svg {
+    width: 2rem;
+  }
+  #about-us .container .right-container .btn {
+    font-size: 0.5rem;
   }
 }
 
@@ -519,5 +541,51 @@ footer span a {
 
   #testimonials .container .testimone .quote blockquote {
     padding: 1rem;
+  }
+  /*Features*/
+  #features .wrapper .card {
+    flex-basis: 100%;
+    padding: 2rem;
+  }
+
+  #about-us .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-gap);
+    line-height: 2;
+    font-size: 1.5rem;
+    padding-inline: 1rem;
+  }
+  #about-us .container .left-container,
+  #about-us .container .right-container {
+    padding-block: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  #quote-mark svg {
+    width: 6rem;
+  }
+
+  h4 {
+    width: 80%;
+    line-height: normal;
+    text-align: left;
+  }
+  #about-us .container .right-container .profile-img {
+    margin: 0;
+    padding: 0;
+  }
+  #about-us .container .right-container .avatar {
+    width: 80%;
+    margin: 0;
+  }
+  #about-us .container .right-container a {
+    display: block;
+    width: 80%;
+  }
+
+  #get-started .wrapper,
+  footer .wrapper {
+    width: 75%;
   }
 }
